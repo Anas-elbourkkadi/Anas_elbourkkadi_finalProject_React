@@ -8,9 +8,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Header = () => {
     return (
-        <div className="px-10 shadow-lg">
+        <div className="px-10 shadow-lg capitalize">
             <div className="flex justify-between py-4 items-center">
-                <h1 className="font-black text-4xl"><Link>fashe<span className="text-red-600">.</span></Link></h1>
+                <h1 className="font-black  text-4xl"><Link>fashe<span className="text-red-600">.</span></Link></h1>
                 <ul className="lg:flex gap-10 hidden font-thin">
                     <li className="border-b border-transparent hover:border-black"><Link>home</Link></li>
                     <li className="border-b border-transparent hover:border-black"><Link>shop</Link></li>
