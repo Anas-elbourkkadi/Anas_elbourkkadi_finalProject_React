@@ -1,30 +1,14 @@
 import { ImgCd } from "../../../constant/imgesCarousl1"
 import { BtnWhite } from "../../../compents/button"
+import { Templite } from "../../../compents/templiteCardeImg"
 
 
 export const ImagesCard = () => {
     return (
-        <div className="grid lg:grid-cols-3 my-10 px-10">
-            {
-                ImgCd.map((e, i) => {
-                    return (
-                        <div key={i} className="">
-                            {[1, 2, 5].includes(i)
-                                ? <div className="w-100 h-75 relative ">
-                                    <img className="w-full h-full object-cover" src={e} alt="imge1Card" loading="lazy" />
-                                    <BtnWhite className="absolute bottom-10 left-[25%] " content="shop now" Pdline='2.5rem' Pdblock='0.5rem' />
-                                </div>
-                                : <div className="w-100 relative">
-                                    <img src={e} alt="imge1Card" loading="lazy" />
-                                    <BtnWhite className="absolute bottom-10 left-[25%]" content="shop now" Pdline='2.5rem' Pdblock='0.5rem' />
-                                </div>
-
-                            }
-                        </div >
-                    )
-                })
-            }
-
-        </div >
+        <div className="grid lg:grid-cols-3 space-y-10 lg:gap-x-10 my-10 px-10">
+            <Templite ImgSrc1={ImgCd[0]} ImgSrc2={ImgCd[3]} contentBtn1="dress" contentBtn2="sunglasses"/>
+            <Templite ImgSrc1={ImgCd[1]} ImgSrc2={ImgCd[4]} contentBtn1="watches" contentBtn2="footerwear"/>
+            <Templite ImgSrc1={ImgCd[2]} ImgSrc2={ImgCd[5]} contentBtn1="bags" contentBtn2="accessories"/>
+        </div>
     )
 }
