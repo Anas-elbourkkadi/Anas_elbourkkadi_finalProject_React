@@ -11,9 +11,9 @@ import { Btn1 } from "../compents/button";
 export const Footer = () => {
     return (
         <>
-            <footer className="bg-[#f0f0f0] py-10 px-10 space-y-30">
-                <div className="grid lg:grid-cols-7 lg:content-between mt-7  gap-7">
-                    <div className="space-y-5 capitalize  lg:col-span-2">
+            <footer className="bg-[#f0f0f0] py-10 px-10 space-y-16 ">
+                <div className="grid lg:grid-cols-7 lg:content-between space-y-16 mt-7  gap-x-7">
+                    <div className="space-y-5 capitalize  lg:col-span-2 md:col-span-7">
                         <h2 className="font-bold">GET IN TOUCH </h2>
                         <p className="text-[#939393] text-[15px] font-light">Any questions? Let us know in store at 8th floor,
                             379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879 </p>
@@ -27,7 +27,7 @@ export const Footer = () => {
                     </div>
                     {
                         ["CATEGORIES", "links", "help"].map((e, i) =>
-                            <div key={i} className="capitalize space-y-5 flex flex-col ">
+                            <div key={i} className="capitalize space-y-5 lg:col-span-1  md:col-span-2">
                                 <h2>{e}</h2>
                                 {
                                     [
@@ -45,7 +45,7 @@ export const Footer = () => {
                         )
                     }
 
-                    <div className="capitalize space-y-5 ">
+                    <div className="capitalize lg:col-span-1 md:col-span-3 space-y-5 ">
                         <h2>NEWSLETTER</h2>
                         <input className="placeholder:capitalize focus:border-b focus:border-b-setext-seconderyC border-b border-b-prtext-primeryC outline-0" type="email" placeholder="email address" />
                         <Btn1 content="Subscribe" Pdline='2.5rem' Pdblock='0.5rem' Bdraduis='9999px' />
@@ -54,7 +54,7 @@ export const Footer = () => {
 
                 </div>
                 <p className="text-center cursor-pointer"><span className="text-[15px] font-light text-primeryC">Copyright © </span><span className="hover:text-seconderyC duration-300 font-light text-[#666666]">2022 Shopify Theme Developed by MassTechnologist </span> <span className="text-[15px] font-light text-primeryC ">All rights reserved.</span> </p>
-                <div className="fixed bottom-3 right-10 bg-[#777777] px-4 py-4 rounded-lg cursor-pointer" id="Nav">
+                <div className="fixed bottom-3 right-10 hover:bg-seconderyC bg-[#777777] px-4 py-4 rounded-lg cursor-pointer" id="Nav">
                     <FaAngleDoubleUp color="white" />
                 </div>
             </footer>

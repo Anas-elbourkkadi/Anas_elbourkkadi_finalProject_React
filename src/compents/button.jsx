@@ -17,12 +17,12 @@ export const Btn1 = (propes) => {
 
 }
 
-export const BtnWhite = ({ content,Pdline, Pdblock, Bdraduis }) => {
+export const BtnWhite = ({ content, Pdline, Pdblock, Bdraduis, className }) => {
     return (
 
 
         <button
-            className="bg-white text-black block text-[16px] cursor-pointer hover:bg-seconderyC duration-500 font-light uppercase"
+            className={` bg-white text-black block text-[16px] cursor-pointer hover:bg-seconderyC duration-500 font-light uppercase ${className}`}
             style={{
                 paddingInline: `${Pdline}`,
                 paddingBlock: `${Pdblock}`,

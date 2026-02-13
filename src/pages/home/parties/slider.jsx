@@ -1,7 +1,8 @@
-import React, { useCallback } from "react";
+import { React, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import images from '../../../constant/imgesCarousl1';
 import { BtnWhite } from "../../../compents/button";
+import { GrNext ,GrPrevious} from "react-icons/gr";
 
 function MyCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -15,11 +16,11 @@ function MyCarousel() {
   }, [emblaApi]);
 
   return (
-    <div className="mt-15    bg-amber-400">
+    <div className="h-screen relative">
 
       {/* Viewport */}
       <div
-        className="overflow-hidden h-[90Vh] w-full  bg-red-600"
+        className="overflow-hidden h-full w-full"
         ref={emblaRef}
       >
         {/* Container */}
@@ -32,7 +33,7 @@ function MyCarousel() {
                 <div className="text-priWhite flex flex-col items-center gap-8">
                   <h2 className="text-3xl font-thin">women collection 2018</h2>
                   <p className="text-8xl">new arrivals</p>
-                  <BtnWhite content="shop now" Pdline='2.5rem' Pdblock='0.5rem' Bdraduis='9999px'/>
+                  <BtnWhite content="shop now" Pdline='2.5rem' Pdblock='0.5rem' Bdraduis='9999px' />
                 </div>
               </div>
             )
@@ -43,19 +44,19 @@ function MyCarousel() {
       </div>
 
       {/* Buttons */}
-      <div className="flex justify-between mt-4 absolute bottom-[50%] left-0">
+      <div className="mt-4 flex justify-between">
         <button
           onClick={scrollPrev}
-          className="px-4 py-2 bg-black text-white rounded"
+          className="h-10 w-10 bg-[#434342] text-white hover:bg-seconderyC duration-200 rounded-full absolute left-15 top-[45%] cursor-pointer flex justify-center items-center"
         >
-          Prev
+          <GrPrevious />
         </button>
 
         <button
           onClick={scrollNext}
-          className="px-4 py-2 bg-black text-white rounded"
+          className="h-10 w-10 bg-[#434342] hover:bg-seconderyC duration-200  text-white rounded-full  absolute right-15 top-[45%] cursor-pointer flex  justify-center items-center"
         >
-          Next
+          <GrNext/>
         </button>
       </div>
 
