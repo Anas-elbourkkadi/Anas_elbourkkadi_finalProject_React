@@ -5,7 +5,7 @@ export const Btn1 = (propes) => {
 
 
         <button
-            className="bg-black text-priWhite block  cursor-pointer hover:bg-seconderyC duration-500 text-lg uppercase"
+            className={`bg-black text-priWhite block  cursor-pointer hover:bg-seconderyC duration-500 text-lg uppercase ${propes.className}`}
             style={{
                 paddingInline: `${propes.Pdline}`,
                 paddingBlock: `${propes.Pdblock}`,
