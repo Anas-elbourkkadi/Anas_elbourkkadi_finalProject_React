@@ -17,7 +17,7 @@ export const Header = () => {
                     <li className="border-b border-transparent hover:border-black"><Link>sale</Link></li>
                     <li className="border-b border-transparent hover:border-black"><Link to="/pages/feauters">Features</Link></li>
                     <li className="border-b border-transparent hover:border-black"><Link>Blog</Link></li>
-                    <li className="border-b border-transparent hover:border-black"><Link>About</Link></li>
+                    <li className="border-b border-transparent hover:border-black"><Link to='/pages/about'>About</Link></li>
                     <li className="border-b border-transparent hover:border-black"><Link>Contact</Link></li>
                 </ul>
                 <div className="flex space-x-5 items-center font-thin">
