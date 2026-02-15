@@ -14,9 +14,9 @@ export const Boxes = () => {
                     <p className="md:text-[18px]  hover:underline cursor-pointer  uppercase tracking-wider font-light">View Collection</p>
                 </div>
             </div>
-            <div className="bg-white text-center lg:w-full md:py-5 pb-3 md:w-[85%]  group">
-                <div className="md:h-70 h-40   overflow-hidden flex justify-center ">
-                    <img className="object-cover group-hover:scale-110 duration-500" src={Items[getimage]} alt="image" loading="lazy" />
+            <div className="bg-white text-center lg:w-full md:py-5 py-5 md:w-[85%]  group">
+                <div className="md:h-70 overflow-hidden flex justify-center items-center ">
+                    <img className="object-cover  group-hover:scale-110 duration-500" src={Items[getimage]} alt="image" loading="lazy" />
                 </div>
                 <p className="text-primeryC hover:text-seconderyC cursor-pointer"> Boxy2 T-Shirt with Roll Sleeve</p>
                 <p className="text-primeryC">$20.00</p>

@@ -1,3 +1,4 @@
+import { Blogs } from "./parties/blogs";
 import { Boxes } from "./parties/boxes";
 import { ImagesCard } from "./parties/cardsImages";
 import { Prodects } from "./parties/prodects";
@@ -13,6 +14,7 @@ export const IndexHome = () => {
             <ImagesCard/>
             <Prodects/>
             <Boxes/>
+            <Blogs/>
         </main>
     )
 }

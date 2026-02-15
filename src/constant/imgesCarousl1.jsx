@@ -17,6 +17,7 @@ import item5 from '../assets/images1/images/item-05.jpg';
 import item6 from '../assets/images1/images/item-02.jpg';
 
 
+
 export default [image1, image2, image3];
 export const ImgCd = [image4, image5, image6, image7, image8, image9];
 export const Items = [item1, item2, item3, item4, item5, item6];
