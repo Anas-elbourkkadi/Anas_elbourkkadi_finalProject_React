@@ -1,3 +1,4 @@
+import { Boxes } from "./parties/boxes";
 import { ImagesCard } from "./parties/cardsImages";
 import { Prodects } from "./parties/prodects";
 import MyCarousel from "./parties/slider";
@@ -11,6 +12,7 @@ export const IndexHome = () => {
             <MyCarousel />
             <ImagesCard/>
             <Prodects/>
+            <Boxes/>
         </main>
     )
 }
