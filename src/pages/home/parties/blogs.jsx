@@ -19,7 +19,6 @@ export const Blogs = () => {
                         </div>
                     )
                 }
-
             </div>
         </section>
     )
