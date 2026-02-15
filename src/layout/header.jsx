@@ -10,12 +10,12 @@ export const Header = () => {
     return (
         <div className="px-10 shadow-lg capitalize fixed top-0 z-50 w-screen bg-white" >
             <div className="flex justify-between py-4 items-center">
-                <h1 className="font-black  text-4xl"><Link>fashe<span className="text-red-600">.</span></Link></h1>
+                <h1 className="font-black  text-4xl"><Link to="/">fashe<span className="text-red-600">.</span></Link></h1>
                 <ul className="lg:flex gap-10 hidden font-thin">
-                    <li  className="border-b border-transparent hover:border-black"><Link><a href="#Nav">home</a></Link></li>
+                    <li  className="border-b border-transparent hover:border-black"><Link to="/"><a href="#Nav">home</a></Link></li>
                     <li className="border-b border-transparent hover:border-black"><Link>shop</Link></li>
                     <li className="border-b border-transparent hover:border-black"><Link>sale</Link></li>
-                    <li className="border-b border-transparent hover:border-black"><Link>Features</Link></li>
+                    <li className="border-b border-transparent hover:border-black"><Link to="/pages/feauters">Features</Link></li>
                     <li className="border-b border-transparent hover:border-black"><Link>Blog</Link></li>
                     <li className="border-b border-transparent hover:border-black"><Link>About</Link></li>
                     <li className="border-b border-transparent hover:border-black"><Link>Contact</Link></li>

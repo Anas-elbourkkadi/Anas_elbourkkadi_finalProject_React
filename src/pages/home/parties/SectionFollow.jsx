@@ -12,9 +12,6 @@ export const Follow = () => {
                     <h4 className="text-[16px] text-[#555555]"> Free Delivery Worldwide</h4>
                     <p className="text-primeryC">Mirum est notare quam littera gothica </p>
                 </section>
-
-
-
                 <section className="md:py-4 md:px-8 mx-4 border-x-2 border-primeryC flex flex-col justify-center items-center  ">
                     <h4 className="text-[16px] text-[#555555]"> 30 Days Return</h4>
                     <p className="text-primeryC">Simply return it within 30 days for an exchange. </p>
