@@ -14,14 +14,14 @@ export const Header = () => {
             <div className="flex justify-between py-4 items-center">
                 <h1 className="font-black  text-4xl"><Link to="/">fashe<span className="text-red-600">.</span></Link></h1>
                 <ul className="lg:flex gap-10 hidden font-thin">
-                    <li className={`border-b border-transparent hover:border-black ${local.pathname == "/home" ? "text-seconderyC" : " text-black"}`}><Link to="/home"><a href="#Nav">home</a></Link></li>
+                    <li className={`border-b border-transparent hover:border-black ${local.pathname == "/" ? "text-seconderyC" : " text-black"}`}><Link to="/"><a href="#Nav">home</a></Link></li>
 
-                    <li className="border-b border-transparent hover:border-black"><Link>shop</Link></li>
-                    <li className="border-b border-transparent hover:border-black"><Link>sale</Link></li>
+                    <li className="border-b border-transparent hover:border-black"><Link to="/pages/shop">shop</Link></li>
+                    <li className="border-b border-transparent hover:border-black"><Link to="/pages/sale">sale</Link></li>
                     <li className={`border-b border-transparent hover:border-black ${local.pathname == "/pages/feauters" ? "text-seconderyC" : " text-black"}`}><Link to="/pages/feauters">Features</Link></li>
-                    <li className="border-b border-transparent hover:border-black"><Link>Blog</Link></li>
+                    <li className={`border-b border-transparent hover:border-black ${local.pathname == "/pages/blog" ? "text-seconderyC" : " text-black"}`}><Link to="/pages/blog">Blog</Link></li>
                     <li className={`border-b border-transparent hover:border-black ${local.pathname == "/pages/about" ? "text-seconderyC" : " text-black"}`}><Link to='/pages/about'>About</Link></li>
-                    <li className="border-b border-transparent hover:border-black"><Link>Contact</Link></li>
+                    <li className={`border-b border-transparent hover:border-black ${local.pathname == "/pages/contact" ? "text-seconderyC" : " text-black"}`}><Link to="/pages/Contact">Contact</Link></li>
                 </ul>
                 <div className="flex space-x-5 items-center font-thin">
                     <div><IoPersonOutline strokeWidth={1} size={25} /></div>

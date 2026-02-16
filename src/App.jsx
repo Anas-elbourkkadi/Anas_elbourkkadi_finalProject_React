@@ -13,7 +13,7 @@ function App() {
       <Provider>
         <Header />
         <Routes>
-          <Route path="/home" element={<IndexHome />} />
+          <Route path="/" element={<IndexHome />} />
           <Route path="/pages/feauters" element={<IndexFeatuers />} />
           <Route path="/pages/about" element={<IndexAbout />} />
         </Routes>
