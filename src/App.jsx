@@ -5,6 +5,7 @@ import { IndexHome } from "./pages/home";
 import { IndexFeatuers } from "./pages/featuers";
 import { IndexAbout } from "./pages/about";
 import { Provider } from "./context";
+import IndexShop from "./pages/Shop";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<IndexHome />} />
           <Route path="/pages/feauters" element={<IndexFeatuers />} />
           <Route path="/pages/about" element={<IndexAbout />} />
+          <Route path="/pages/shop" element={<IndexShop/>}/>
         </Routes>
         <Footer />
       </Provider>

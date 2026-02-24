@@ -1,4 +1,4 @@
-import data from '../../../constant/dataCarousl1.json';
+import {ImagePro} from  '../../../constant/dataCarousl1';
 import useEmblaCarousel from 'embla-carousel-react';
 import { TempletPro } from '../../../compents/proudectTemplet';
 import { useCallback } from 'react';
@@ -23,7 +23,7 @@ export const Prodects = () => {
                 <div className='embla_viewport overflow-x-hidden' ref={emblaRef}>
                     <div className='embla_container flex touch-pan-y touch-pinch-zoom' >
                         {
-                            data.map((e, index) =>
+                            ImagePro.map((e, index) =>
                                 <div key={index} className="embla_slide  px-5 flex-none w-full  md:w-1/3 lg:w-1/4 ">
                                     <TempletPro image={e.image} price={e.price} discript={e.discript} />
                                 </div>
