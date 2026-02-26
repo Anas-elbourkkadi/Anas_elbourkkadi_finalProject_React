@@ -13,7 +13,8 @@ export const ImagePro = [
     {
         image: img1,
         discript: "Boxy5 T-Shirt with Roll Sleeve",
-        price: "$20"
+        price: "$20",
+        
     },
     {
         image: img2,

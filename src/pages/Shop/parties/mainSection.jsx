@@ -1,11 +1,15 @@
 import { ImagePro } from '../../../constant/dataCarousl1'
 import { TempletPro } from '../../../compents/proudectTemplet'
 import { GrNext } from "react-icons/gr";
+import { useSearchParams } from 'react-router-dom';
+import { GrPrevious } from "react-icons/gr";
 
 export const MainSection = () => {
+    const [sharchparam, setshearchparm] = useSearchParams();
+    const check = sharchparam.get("filter") === "2";
     return (
-        <div className="grid grid-cols-12 px-10 pb-5">
-            <div className="col-span-3  w-full space-y-6">
+        <div className="grid grid-cols-12 gap-5 px-10 pb-5">
+            <div className="lg:col-span-3 md:col-span-4 col-span-12 space-y-6">
                 <div className="flex flex-col gap-2">
                     <h2 className="font-black text-xl">Categories</h2>
                     <p className="font-light">Best Seller (8 items)</p>
@@ -65,12 +69,12 @@ export const MainSection = () => {
                     </label>
                 </div>
 
-                <input type="text" placeholder="search..." className="border border-primeryC px-4 py-3 outline-0 focus:placeholder:opacity-0 " />
+                <input type="text" placeholder="search..." className="border border-primeryC w-full lg:px-4 px-4 md:px-1 py-3 outline-0 focus:placeholder:opacity-0 " />
 
             </div>
-            <div className="col-span-9   capitalize">
+            <div className="lg:col-span-9  md:col-span-8 col-span-12  capitalize">
                 <div className="flex justify-between items-center">
-                    <div className="space-x-5">
+                    <div className="space-y-3 space-x-5">
                         <select name="" id="" className="border border-primeryC w-50 py-2 bg-white ps-2 font-light text-sm">
                             <option>Featured</option>
                             <option>Best Selling</option>
@@ -90,22 +94,28 @@ export const MainSection = () => {
                     <p className="text-primeryC">Showing 1 to 6 of 8 items</p>
                 </div>
 
-                <div className='grid grid-cols-3 gap-3 mt-10'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10 '>
                     {
-                        ImagePro.map((e, i) =>
-                            <div key={i} className='w-full'>
-
-                                <TempletPro image={e.image} price={e.price} discript={e.discript} />
-                                {console.log(e.image)}
-                            </div>
-                        )
+                        !check ?
+                            ImagePro.map((e, i) =>
+                                <div key={i} className='w-full'>
+                                    <TempletPro image={e.image} price={e.price} discript={e.discript} />
+                                </div>
+                            )
+                            :
+                            ImagePro.filter((_, i) => (i === 5 || i === 6)).map((e, i) =>
+                                <div key={i} className='w-full'>
+                                    <TempletPro image={e.image} price={e.price} discript={e.discript} />
+                                </div>
+                            )
                     }
 
                 </div>
-                <div className='mt-5 flex  space-x-3'>
-                   <button className='text-primeryC border border-primeryC rounded-full  box-border w-9 h-9 hover:bg-[#222] hover:text-white'>1</button>
-                   <button className='text-primeryC border border-primeryC rounded-full  box-border w-9 h-9 hover:bg-[#222] hover:text-white'>2</button>
-                   <button className='text-primeryC border border-primeryC rounded-full  box-border w-9 h-9 hover:bg-[#222] hover:text-white flex justify-center items-center'><GrNext/></button>
+                <div className={`mt-5 flex  space-x-3`}>
+                    <button  onClick={() => setshearchparm("?all=1")} className={`text-primeryC border border-primeryC rounded-full  box-border w-9 h-9 hover:bg-[#222] hover:text-white cursor-pointer flex justify-center items-center ${!check && "hidden" }`}> <GrPrevious /></button>
+                    <button onClick={() => setshearchparm("?all=1")} className={`text-primeryC border border-primeryC rounded-full  box-border w-9 h-9 hover:bg-[#222] hover:text-white cursor-pointer ${!check && "bg-[#222] text-white"}`}>1</button>
+                    <button onClick={() => setshearchparm("?filter=2")} className={`text-primeryC border border-primeryC rounded-full  box-border w-9 h-9 hover:bg-[#222] hover:text-white cursor-pointer ${check && "bg-[#222] text-white"}`}>2</button>
+                    <button onClick={() => setshearchparm("?filter=2")} className={`text-primeryC border border-primeryC rounded-full  box-border w-9 h-9 hover:bg-[#222] hover:text-white cursor-pointer flex justify-center items-center ${check && "hidden"}`}><GrNext /></button>
                 </div>
             </div>
         </div>
